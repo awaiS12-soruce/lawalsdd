@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alzxym - The Most Advanced Discord Bot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0c0c14;
+        }
+        .hero-bg {
+            background-image: radial-gradient(at 50% 10%, rgba(88, 101, 242, 0.2), transparent 70%);
+        }
+        .gradient-text {
+            background-image: linear-gradient(to right, #7b62fe, #a698ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .discord-purple {
+            background-color: #5865f2;
+        }
+        .discord-purple-hover:hover {
+            background-color: #6a74f4;
+        }
+    </style>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-[#0c0c14] text-gray-200">
+
+    <!-- Navigation Bar -->
+    <header class="p-4 md:p-6 lg:p-8 flex items-center justify-between z-50 sticky top-0 bg-[#0c0c14] bg-opacity-90 backdrop-blur-md">
+        <div class="flex items-center space-x-3">
+            <img src="https://cdn.discordapp.com/avatars/1420012272876519476/c727ebd07739b67439088305bf15bbf9.webp" alt="Alzxym Bot Avatar" class="h-10 w-10 rounded-full">
+            <span class="text-xl font-bold text-white">Alzxym</span>
+        </div>
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+            <a href="#commands" class="hover:text-white transition-colors duration-200">Commands</a>
+            <a href="#docs" class="hover:text-white transition-colors duration-200">Docs</a>
+            <a href="#faq" class="hover:text-white transition-colors duration-200">FAQ</a>
+            <a href="https://discord.gg/MRGsFJPsFm" target="_blank" class="hover:text-white transition-colors duration-200">Support Server</a>
+        </nav>
+        <button id="mobile-menu-btn" class="md:hidden text-white text-2xl">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-[#0c0c14] z-50 transform -translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="p-8">
+            <div class="flex justify-between items-center mb-8">
+                <div class="flex items-center space-x-3">
+                    <img src="https://cdn.discordapp.com/avatars/1420012272876519476/c727ebd07739b67439088305bf15bbf9.webp" alt="Alzxym Bot Avatar" class="h-10 w-10 rounded-full">
+                    <span class="text-xl font-bold text-white">Alzxym</span>
+                </div>
+                <button id="close-menu-btn" class="text-gray-300 text-2xl">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-4 text-lg font-semibold">
+                <a href="#commands" class="mobile-nav-link text-gray-300 hover:text-white transition-colors duration-200">Commands</a>
+                <a href="#docs" class="mobile-nav-link text-gray-300 hover:text-white transition-colors duration-200">Docs</a>
+                <a href="#faq" class="mobile-nav-link text-gray-300 hover:text-white transition-colors duration-200">FAQ</a>
+                <a href="https://discord.gg/MRGsFJPsFm" target="_blank" class="mobile-nav-link text-gray-300 hover:text-white transition-colors duration-200">Support Server</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-16 md:py-24 text-center">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 gradient-text">Alzxym</h1>
+            <p class="text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-400">The most advanced Discord bot with 55+ commands, message analytics, voice tracking, moderation tools, and enterprise-grade features for your server.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="https://discord.com/oauth2/authorize?client_id=1420012272876519476&permissions=8&response_type=code&redirect_uri=https%3A%2F%2Fdiscord.com%2Foauth2%2Fauthorize%3Fclient_id%3D1420012272876519476&integration_type=0&scope=bot+guilds.channels.read+activities.read+activities.invites.write+gateway.connect+applications.builds.upload+sdk.social_layer_presence+guilds.members.read" target="_blank" class="bg-[#5865f2] text-white font-semibold py-3 px-6 rounded-full shadow-lg transition-transform transform hover:scale-105 discord-purple-hover">
+                    <i class="fab fa-discord mr-2"></i>Invite to Discord
+                </a>
+                <a href="https://discord.gg/MRGsFJPsFm" target="_blank" class="bg-gray-800 text-gray-200 font-semibold py-3 px-6 rounded-full shadow-lg transition-transform transform hover:scale-105 hover:bg-gray-700">
+                    <i class="fas fa-headset mr-2"></i>Support Server
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Prefix Card Section -->
+    <section class="py-12 bg-gray-900 text-gray-200">
+        <div class="container mx-auto px-4 flex justify-center">
+            <div class="bg-gray-800 rounded-lg p-6 text-center shadow-lg transition-transform transform hover:scale-105 w-full max-w-sm">
+                <h3 class="text-lg font-semibold mb-2 text-white">Bot Prefix</h3>
+                <p class="text-4xl font-extrabold text-[#5865f2] mb-1">`</p>
+                <p class="text-sm text-gray-400">Use this before any command.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commands Section -->
+    <section id="commands" class="bg-gray-100 py-16 text-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">Commands</h2>
+            <p class="text-center max-w-2xl mx-auto text-gray-600 mb-8">Browse through all the powerful commands Alzxym has to offer. Use the search bar or categories to find what you need.</p>
+
+            <!-- Search and Filter -->
+            <div class="flex flex-col md:flex-row items-center justify-between mb-8 space-y-4 md:space-y-0 md:space-x-4">
+                <div class="relative w-full md:w-auto flex-1">
+                    <input type="text" id="command-search" placeholder="Search for a command..." class="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5865f2] transition-colors duration-200">
+                    <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                </div>
+                <div class="flex flex-wrap justify-center md:justify-end space-x-2 md:space-x-3 lg:space-x-4 text-sm">
+                    <button class="category-btn active px-4 py-2 rounded-full font-medium bg-[#5865f2] text-white transition-colors duration-200">All</button>
+                    <button class="category-btn px-4 py-2 rounded-full font-medium bg-white text-gray-700 hover:bg-gray-200 transition-colors duration-200">Information</button>
+                    <button class="category-btn px-4 py-2 rounded-full font-medium bg-white text-gray-700 hover:bg-gray-200 transition-colors duration-200">Moderation</button>
+                    <button class="category-btn px-4 py-2 rounded-full font-medium bg-white text-gray-700 hover:bg-gray-200 transition-colors duration-200">Utility</button>
+                    <button class="category-btn px-4 py-2 rounded-full font-medium bg-white text-gray-700 hover:bg-gray-200 transition-colors duration-200">Fun</button>
+                    <button class="category-btn px-4 py-2 rounded-full font-medium bg-white text-gray-700 hover:bg-gray-200 transition-colors duration-200">Economy</button>
+                </div>
+            </div>
+
+            <!-- Command Cards Grid -->
+            <div id="commands-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Commands will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Docs Section (New) -->
+    <section id="docs" class="py-16 bg-[#0c0c14] text-gray-200">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-white">Documentation</h2>
+            <p class="text-center max-w-2xl mx-auto text-gray-400 mb-8">Find detailed guides on how to set up and configure Alzxym for your server.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-800 rounded-lg p-6 shadow-lg transition-transform transform hover:scale-105">
+                    <h3 class="text-lg font-semibold mb-2 text-white">Getting Started Guide</h3>
+                    <p class="text-sm text-gray-400">A step-by-step guide to invite Alzxym and set up basic permissions.</p>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-6 shadow-lg transition-transform transform hover:scale-105">
+                    <h3 class="text-lg font-semibold mb-2 text-white">Moderation Setup</h3>
+                    <p class="text-sm text-gray-400">Configure moderation commands and logging for a safe server environment.</p>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-6 shadow-lg transition-transform transform hover:scale-105">
+                    <h3 class="text-lg font-semibold mb-2 text-white">Analytics Dashboard</h3>
+                    <p class="text-sm text-gray-400">Learn how to use the web dashboard to view detailed server analytics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section (New) -->
+    <section id="faq" class="py-16 bg-gray-100 text-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">Frequently Asked Questions</h2>
+            <p class="text-center max-w-2xl mx-auto text-gray-600 mb-8">Answers to the most common questions about Alzxym.</p>
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="bg-white rounded-lg p-6 shadow-md border border-gray-200">
+                    <h4 class="font-bold text-lg mb-2">Q: Is Alzxym free to use?</h4>
+                    <p class="text-gray-700">A: Yes, Alzxym is completely free to use and provides all its features without any cost.</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-md border border-gray-200">
+                    <h4 class="font-bold text-lg mb-2">Q: How can I report a bug or suggest a feature?</h4>
+                    <p class="text-gray-700">A: You can join our official support server and use the <code>/suggest</code> command or contact a developer directly.</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-md border border-gray-200">
+                    <h4 class="font-bold text-lg mb-2">Q: Why isn't a command working for me?</h4>
+                    <p class="text-gray-700">A: Please ensure that Alzxym has the necessary permissions in the channel or server. You can check the permissions in your server settings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Preview Section -->
+    <section class="py-16 bg-[#0c0c14] text-gray-200">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-white">Enterprise-Grade Features</h2>
+            <p class="text-center max-w-2xl mx-auto text-gray-400 mb-8">Alzxym provides powerful tools to manage your server with ease and professionalism.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Feature Card 1 -->
+                <div class="bg-gray-800 rounded-lg p-6 text-center shadow-lg transition-transform transform hover:scale-105">
+                    <div class="text-[#5865f2] text-4xl mb-4"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="text-lg font-semibold mb-2 text-white">Message Analytics</h3>
+                    <p class="text-sm text-gray-400">Track and visualize message activity in your server to understand engagement trends.</p>
+                </div>
+                <!-- Feature Card 2 -->
+                <div class="bg-gray-800 rounded-lg p-6 text-center shadow-lg transition-transform transform hover:scale-105">
+                    <div class="text-[#5865f2] text-4xl mb-4"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="text-lg font-semibold mb-2 text-white">Advanced Moderation</h3>
+                    <p class="text-sm text-gray-400">Comprehensive tools to maintain a safe and civil environment for your members.</p>
+                </div>
+                <!-- Feature Card 3 -->
+                <div class="bg-gray-800 rounded-lg p-6 text-center shadow-lg transition-transform transform hover:scale-105">
+                    <div class="text-[#5865f2] text-4xl mb-4"><i class="fas fa-microphone"></i></div>
+                    <h3 class="text-lg font-semibold mb-2 text-white">Voice Tracking</h3>
+                    <p class="text-sm text-gray-400">Monitor voice channel activity and usage across your server with detailed statistics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="bg-gray-100 py-16 text-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Stat Card 1 -->
+                <div class="bg-white rounded-lg p-6 text-center shadow-lg">
+                    <h3 class="text-4xl font-extrabold text-[#5865f2] mb-2">55+</h3>
+                    <p class="text-sm font-semibold">Commands</p>
+                </div>
+                <!-- Stat Card 2 -->
+                <div class="bg-white rounded-lg p-6 text-center shadow-lg">
+                    <h3 class="text-4xl font-extrabold text-[#5865f2] mb-2">24/7</h3>
+                    <p class="text-sm font-semibold">Uptime</p>
+                </div>
+                <!-- Stat Card 3 -->
+                <div class="bg-white rounded-lg p-6 text-center shadow-lg">
+                    <h3 class="text-4xl font-extrabold text-[#5865f2] mb-2">6</h3>
+                    <p class="text-sm font-semibold">Categories</p>
+                </div>
+                <!-- Stat Card 4 -->
+                <div class="bg-white rounded-lg p-6 text-center shadow-lg">
+                    <h3 class="text-4xl font-extrabold text-[#5865f2] mb-2">∞</h3>
+                    <p class="text-sm font-semibold">Possibilities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-[#12121e] text-gray-400">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-start space-y-8 md:space-y-0">
+                <div class="flex-shrink-0 text-center md:text-left">
+                    <div class="flex items-center space-x-3 mb-2 justify-center md:justify-start">
+                        <img src="https://cdn.discordapp.com/avatars/1420012272876519476/c727ebd07739b67439088305bf15bbf9.webp" alt="Alzxym Bot Avatar" class="h-10 w-10 rounded-full">
+                        <span class="text-2xl font-bold text-white">Alzxym</span>
+                    </div>
+                    <p class="text-sm max-w-xs">The most advanced Discord bot for modern servers.</p>
+                </div>
+                <div class="flex flex-col items-center md:items-end space-y-4">
+                    <a href="https://discord.com/oauth2/authorize?client_id=1420012272876519476&permissions=8&response_type=code&redirect_uri=https%3A%2F%2Fdiscord.com%2Foauth2%2Fauthorize%3Fclient_id%3D1420012272876519476&integration_type=0&scope=bot+guilds.channels.read+activities.read+activities.invites.write+gateway.connect+applications.builds.upload+sdk.social_layer_presence+guilds.members.read" target="_blank" class="text-sm hover:text-white transition-colors duration-200">Invite Bot</a>
+                    <a href="https://discord.gg/MRGsFJPsFm" target="_blank" class="text-sm hover:text-white transition-colors duration-200">Support Server</a>
+                    <a href="#commands" class="text-sm hover:text-white transition-colors duration-200">Commands</a>
+                </div>
+            </div>
+            <div class="text-center text-xs mt-8 text-gray-500">
+                © 2024 Alzxym. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const commands = [
+            // Information Commands
+            { name: "botinfo", aliases: ["bi", "about"], description: "Displays information about the bot.", category: "Information", usage: "botinfo", permissions: "none", isAdmin: false },
+            { name: "ping", aliases: ["p", "latency"], description: "Checks the bot's latency to the Discord API.", category: "Information", usage: "ping", permissions: "none", isAdmin: false },
+            { name: "serverinfo", aliases: ["si"], description: "Shows detailed information about the server.", category: "Information", usage: "serverinfo", permissions: "none", isAdmin: false },
+            { name: "uptime", aliases: ["ut"], description: "Shows how long the bot has been online.", category: "Information", usage: "uptime", permissions: "none", isAdmin: false },
+            { name: "userinfo", aliases: ["ui"], description: "Displays information about a user.", category: "Information", usage: "userinfo [user]", permissions: "none", isAdmin: false },
+            { name: "messagestats", aliases: ["ms"], description: "View message statistics for a user or channel.", category: "Information", usage: "messagestats [user/channel]", permissions: "none", isAdmin: false },
+            { name: "voicestats", aliases: ["vs"], description: "Shows voice channel activity for a user.", category: "Information", usage: "voicestats [user]", permissions: "none", isAdmin: false },
+            { name: "memberstats", aliases: ["mstats"], description: "Displays member count and stats.", category: "Information", usage: "memberstats", permissions: "none", isAdmin: false },
+            { name: "channelstats", aliases: ["cstats"], description: "Provides statistics for a text channel.", category: "Information", usage: "channelstats [channel]", permissions: "none", isAdmin: false },
+            { name: "analytics", aliases: ["ana"], description: "View server analytics.", category: "Information", usage: "analytics", permissions: "Administrator", isAdmin: true },
+            
+            // Moderation Commands
+            { name: "ban", aliases: ["b"], description: "Bans a user from the server.", category: "Moderation", usage: "ban [user] [reason]", permissions: "Ban Members", isAdmin: true },
+            { name: "kick", aliases: ["k"], description: "Kicks a user from the server.", category: "Moderation", usage: "kick [user] [reason]", permissions: "Kick Members", isAdmin: true },
+            { name: "mute", aliases: ["m"], description: "Mutes a user for a specified duration.", category: "Moderation", usage: "mute [user] [duration] [reason]", permissions: "Manage Roles", isAdmin: true },
+            { name: "clear", aliases: ["purge"], description: "Deletes a number of messages from a channel.", category: "Moderation", usage: "clear [amount]", permissions: "Manage Messages", isAdmin: true },
+            { name: "warn", aliases: ["w"], description: "Issues a warning to a user.", category: "Moderation", usage: "warn [user] [reason]", permissions: "Manage Messages", isAdmin: true },
+            { name: "role", aliases: ["r"], description: "Manages roles for users.", category: "Moderation", usage: "role [user] [role]", permissions: "Manage Roles", isAdmin: true },
+            { name: "announce", aliases: ["a"], description: "Sends an announcement to a channel.", category: "Moderation", usage: "announce [channel] [message]", permissions: "Administrator", isAdmin: true },
+            { name: "config", aliases: ["cfg"], description: "Manages server settings.", category: "Moderation", usage: "config", permissions: "Administrator", isAdmin: true },
+            { name: "permissions", aliases: ["perms"], description: "Checks user permissions.", category: "Moderation", usage: "permissions [user]", permissions: "none", isAdmin: false },
+            { name: "incident", aliases: ["inc"], description: "Logs a moderation incident.", category: "Moderation", usage: "incident [user] [type] [details]", permissions: "Manage Channels", isAdmin: true },
+
+            // Utility Commands
+            { name: "help", aliases: ["h"], description: "Displays a list of all commands.", category: "Utility", usage: "help [command]", permissions: "none", isAdmin: false },
+            { name: "invite", aliases: ["inv"], description: "Sends the bot's invite link.", category: "Utility", usage: "invite", permissions: "none", isAdmin: false },
+            { name: "suggest", aliases: ["sug"], description: "Sends a suggestion to the bot's developers.", category: "Utility", usage: "suggest [suggestion]", permissions: "none", isAdmin: false },
+            { name: "remindme", aliases: ["rm"], description: "Sets a reminder for a specific time.", category: "Utility", usage: "remindme [time] [message]", permissions: "none", isAdmin: false },
+            { name: "avatar", aliases: ["av"], description: "Displays a user's avatar.", category: "Utility", usage: "avatar [user]", permissions: "none", isAdmin: false },
+            { name: "weather", aliases: ["w"], description: "Provides weather information for a location.", category: "Utility", usage: "weather [location]", permissions: "none", isAdmin: false },
+            { name: "calculator", aliases: ["calc"], description: "Performs a mathematical calculation.", category: "Utility", usage: "calculator [expression]", permissions: "none", isAdmin: false },
+            { name: "export", aliases: ["exp"], description: "Exports server data (e.g., messages, users).", category: "Utility", usage: "export [type]", permissions: "Administrator", isAdmin: true },
+            
+            // Fun Commands
+            { name: "8ball", aliases: ["magic8"], description: "Answers a yes/no question.", category: "Fun", usage: "8ball [question]", permissions: "none", isAdmin: false },
+            { name: "joke", aliases: ["j"], description: "Tells a random joke.", category: "Fun", usage: "joke", permissions: "none", isAdmin: false },
+            { name: "meme", aliases: ["m"], description: "Sends a random meme.", category: "Fun", usage: "meme", permissions: "none", isAdmin: false },
+            { name: "coinflip", aliases: ["cf"], description: "Flips a coin.", category: "Fun", usage: "coinflip", permissions: "none", isAdmin: false },
+            { name: "roll", aliases: ["dice"], description: "Rolls a dice with a specified number of sides.", category: "Fun", usage: "roll [sides]", permissions: "none", isAdmin: false },
+
+            // Economy Commands
+            { name: "balance", aliases: ["bal"], description: "Checks your current balance.", category: "Economy", usage: "balance", permissions: "none", isAdmin: false },
+            { name: "daily", aliases: ["d"], description: "Claims your daily reward.", category: "Economy", usage: "daily", permissions: "none", isAdmin: false },
+            { name: "shop", aliases: ["s"], description: "Shows the economy shop.", category: "Economy", usage: "shop", permissions: "none", isAdmin: false },
+        ];
+
+        // Get elements
+        const commandsGrid = document.getElementById('commands-grid');
+        const searchInput = document.getElementById('command-search');
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        // Function to render command cards
+        function renderCommands(filteredCommands) {
+            commandsGrid.innerHTML = ''; // Clear previous cards
+            if (filteredCommands.length === 0) {
+                commandsGrid.innerHTML = '<p class="text-center text-gray-500 col-span-1 md:col-span-2 lg:col-span-3">No commands found matching your criteria.</p>';
+                return;
+            }
+            
+            filteredCommands.forEach(cmd => {
+                const card = document.createElement('div');
+                card.className = "bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:border hover:border-[#5865f2] border border-gray-200";
+                
+                let aliasesHtml = '';
+                if (cmd.aliases && cmd.aliases.length > 0) {
+                    aliasesHtml = `<p class="text-xs text-gray-500 mb-2">Aliases: <span class="font-mono text-gray-600">${cmd.aliases.join(', ')}</span></p>`;
+                }
+
+                const adminStatus = cmd.isAdmin ? `<span class="bg-red-100 text-red-800 text-xs font-semibold px-2 py-0.5 rounded-full ml-2">Admin</span>` : '';
+
+                card.innerHTML = `
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-bold text-gray-800">${cmd.name}</h3>
+                        ${adminStatus}
+                    </div>
+                    ${aliasesHtml}
+                    <p class="text-sm text-gray-700 mb-4">${cmd.description}</p>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <p><strong>Usage:</strong> <span class="font-mono text-gray-800">${cmd.usage}</span></p>
+                        <p><strong>Permissions:</strong> ${cmd.permissions}</p>
+                    </div>
+                `;
+                commandsGrid.appendChild(card);
+            });
+        }
+
+        // Search and filter logic
+        function filterAndSearchCommands() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const activeCategory = document.querySelector('.category-btn.active').textContent;
+
+            const filteredCommands = commands.filter(cmd => {
+                const matchesCategory = activeCategory === "All" || cmd.category === activeCategory;
+                const matchesSearch = cmd.name.toLowerCase().includes(searchTerm) || 
+                                      (cmd.aliases && cmd.aliases.some(alias => alias.toLowerCase().includes(searchTerm))) ||
+                                      cmd.description.toLowerCase().includes(searchTerm);
+                return matchesCategory && matchesSearch;
+            });
+            renderCommands(filteredCommands);
+        }
+
+        // Event listeners
+        searchInput.addEventListener('input', filterAndSearchCommands);
+
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                categoryButtons.forEach(btn => {
+                    btn.classList.remove('active', 'bg-[#5865f2]', 'text-white');
+                    btn.classList.add('bg-white', 'text-gray-700');
+                });
+                // Add active class to the clicked button
+                button.classList.add('active', 'bg-[#5865f2]', 'text-white');
+                button.classList.remove('bg-white', 'text-gray-700');
+                
+                filterAndSearchCommands();
+            });
+        });
+
+        // Mobile menu event listeners
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuOverlay.classList.remove('-translate-x-full');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenuOverlay.classList.add('-translate-x-full');
+        });
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuOverlay.classList.add('-translate-x-full');
+            });
+        });
+
+        // Initial render
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCommands(commands);
+        });
+    </script>
+
+</body>
+</html>
