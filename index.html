@@ -26,12 +26,10 @@
             background-color: #6a74f4;
         }
     </style>
-    <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body class="bg-[#0c0c14] text-gray-200">
 
-    <!-- Navigation Bar -->
     <header class="p-4 md:p-6 lg:p-8 flex items-center justify-between z-50 sticky top-0 bg-[#0c0c14] bg-opacity-90 backdrop-blur-md">
         <div class="flex items-center space-x-3">
             <img src="https://cdn.discordapp.com/avatars/1420012272876519476/c727ebd07739b67439088305bf15bbf9.webp" alt="Alzxym Bot Avatar" class="h-10 w-10 rounded-full">
@@ -48,7 +46,6 @@
         </button>
     </header>
 
-    <!-- Mobile Menu Overlay -->
     <div id="mobile-menu-overlay" class="fixed inset-0 bg-[#0c0c14] z-50 transform -translate-x-full transition-transform duration-300 ease-in-out">
         <div class="p-8">
             <div class="flex justify-between items-center mb-8">
@@ -69,11 +66,10 @@
         </div>
     </div>
 
-    <!-- Hero Section -->
     <section class="hero-bg py-16 md:py-24 text-center">
         <div class="container mx-auto px-4">
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 gradient-text">Alzxym</h1>
-            <p class="text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-400">The most advanced Discord bot with 55+ commands, message analytics, voice tracking, moderation tools, and enterprise-grade features for your server.</p>
+            <p class="text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-400">The most advanced Discord bot with 79 commands, message analytics, voice tracking, moderation tools, and enterprise-grade features for your server.</p>
             <div class="flex justify-center space-x-4">
                 <a href="https://discord.com/oauth2/authorize?client_id=1420012272876519476&permissions=8&response_type=code&redirect_uri=https%3A%2F%2Fdiscord.com%2Foauth2%2Fauthorize%3Fclient_id%3D1420012272876519476&integration_type=0&scope=bot+guilds.channels.read+activities.read+activities.invites.write+gateway.connect+applications.builds.upload+sdk.social_layer_presence+guilds.members.read" target="_blank" class="bg-[#5865f2] text-white font-semibold py-3 px-6 rounded-full shadow-lg transition-transform transform hover:scale-105 discord-purple-hover">
                     <i class="fab fa-discord mr-2"></i>Invite to Discord
@@ -85,7 +81,6 @@
         </div>
     </section>
     
-    <!-- Prefix Card Section -->
     <section class="py-12 bg-gray-900 text-gray-200">
         <div class="container mx-auto px-4 flex justify-center">
             <div class="bg-gray-800 rounded-lg p-6 text-center shadow-lg transition-transform transform hover:scale-105 w-full max-w-sm">
@@ -96,13 +91,11 @@
         </div>
     </section>
 
-    <!-- Commands Section -->
     <section id="commands" class="bg-gray-100 py-16 text-gray-900">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">Commands</h2>
             <p class="text-center max-w-2xl mx-auto text-gray-600 mb-8">Browse through all the powerful commands Alzxym has to offer. Use the search bar or categories to find what you need.</p>
 
-            <!-- Search and Filter -->
             <div class="flex flex-col md:flex-row items-center justify-between mb-8 space-y-4 md:space-y-0 md:space-x-4">
                 <div class="relative w-full md:w-auto flex-1">
                     <input type="text" id="command-search" placeholder="Search for a command..." class="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5865f2] transition-colors duration-200">
@@ -110,22 +103,19 @@
                 </div>
                 <div class="flex flex-wrap justify-center md:justify-end space-x-2 md:space-x-3 lg:space-x-4 text-sm">
                     <button class="category-btn active px-4 py-2 rounded-full font-medium bg-[#5865f2] text-white transition-colors duration-200">All</button>
-                    <button class="category-btn px-4 py-2 rounded-full font-medium bg-white text-gray-700 hover:bg-gray-200 transition-colors duration-200">Information</button>
                     <button class="category-btn px-4 py-2 rounded-full font-medium bg-white text-gray-700 hover:bg-gray-200 transition-colors duration-200">Moderation</button>
                     <button class="category-btn px-4 py-2 rounded-full font-medium bg-white text-gray-700 hover:bg-gray-200 transition-colors duration-200">Utility</button>
                     <button class="category-btn px-4 py-2 rounded-full font-medium bg-white text-gray-700 hover:bg-gray-200 transition-colors duration-200">Fun</button>
                     <button class="category-btn px-4 py-2 rounded-full font-medium bg-white text-gray-700 hover:bg-gray-200 transition-colors duration-200">Economy</button>
+                    <button class="category-btn px-4 py-2 rounded-full font-medium bg-white text-gray-700 hover:bg-gray-200 transition-colors duration-200">Music</button>
                 </div>
             </div>
 
-            <!-- Command Cards Grid -->
             <div id="commands-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Commands will be dynamically inserted here -->
-            </div>
+                </div>
         </div>
     </section>
 
-    <!-- Docs Section (New) -->
     <section id="docs" class="py-16 bg-[#0c0c14] text-gray-200">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-white">Documentation</h2>
@@ -147,7 +137,6 @@
         </div>
     </section>
 
-    <!-- FAQ Section (New) -->
     <section id="faq" class="py-16 bg-gray-100 text-gray-900">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">Frequently Asked Questions</h2>
@@ -169,25 +158,21 @@
         </div>
     </section>
 
-    <!-- Features Preview Section -->
     <section class="py-16 bg-[#0c0c14] text-gray-200">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-white">Enterprise-Grade Features</h2>
             <p class="text-center max-w-2xl mx-auto text-gray-400 mb-8">Alzxym provides powerful tools to manage your server with ease and professionalism.</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Feature Card 1 -->
                 <div class="bg-gray-800 rounded-lg p-6 text-center shadow-lg transition-transform transform hover:scale-105">
                     <div class="text-[#5865f2] text-4xl mb-4"><i class="fas fa-chart-line"></i></div>
                     <h3 class="text-lg font-semibold mb-2 text-white">Message Analytics</h3>
                     <p class="text-sm text-gray-400">Track and visualize message activity in your server to understand engagement trends.</p>
                 </div>
-                <!-- Feature Card 2 -->
                 <div class="bg-gray-800 rounded-lg p-6 text-center shadow-lg transition-transform transform hover:scale-105">
                     <div class="text-[#5865f2] text-4xl mb-4"><i class="fas fa-shield-alt"></i></div>
                     <h3 class="text-lg font-semibold mb-2 text-white">Advanced Moderation</h3>
                     <p class="text-sm text-gray-400">Comprehensive tools to maintain a safe and civil environment for your members.</p>
                 </div>
-                <!-- Feature Card 3 -->
                 <div class="bg-gray-800 rounded-lg p-6 text-center shadow-lg transition-transform transform hover:scale-105">
                     <div class="text-[#5865f2] text-4xl mb-4"><i class="fas fa-microphone"></i></div>
                     <h3 class="text-lg font-semibold mb-2 text-white">Voice Tracking</h3>
@@ -197,26 +182,21 @@
         </div>
     </section>
 
-    <!-- Statistics Section -->
     <section class="bg-gray-100 py-16 text-gray-900">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Stat Card 1 -->
                 <div class="bg-white rounded-lg p-6 text-center shadow-lg">
-                    <h3 class="text-4xl font-extrabold text-[#5865f2] mb-2">55+</h3>
+                    <h3 class="text-4xl font-extrabold text-[#5865f2] mb-2">79</h3>
                     <p class="text-sm font-semibold">Commands</p>
                 </div>
-                <!-- Stat Card 2 -->
                 <div class="bg-white rounded-lg p-6 text-center shadow-lg">
                     <h3 class="text-4xl font-extrabold text-[#5865f2] mb-2">24/7</h3>
                     <p class="text-sm font-semibold">Uptime</p>
                 </div>
-                <!-- Stat Card 3 -->
                 <div class="bg-white rounded-lg p-6 text-center shadow-lg">
-                    <h3 class="text-4xl font-extrabold text-[#5865f2] mb-2">6</h3>
+                    <h3 class="text-4xl font-extrabold text-[#5865f2] mb-2">5</h3>
                     <p class="text-sm font-semibold">Categories</p>
                 </div>
-                <!-- Stat Card 4 -->
                 <div class="bg-white rounded-lg p-6 text-center shadow-lg">
                     <h3 class="text-4xl font-extrabold text-[#5865f2] mb-2">∞</h3>
                     <p class="text-sm font-semibold">Possibilities</p>
@@ -225,7 +205,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="py-16 bg-[#12121e] text-gray-400">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center md:items-start space-y-8 md:space-y-0">
@@ -250,51 +229,93 @@
 
     <script>
         const commands = [
-            // Information Commands
-            { name: "botinfo", aliases: ["bi", "about"], description: "Displays information about the bot.", category: "Information", usage: "botinfo", permissions: "none", isAdmin: false },
-            { name: "ping", aliases: ["p", "latency"], description: "Checks the bot's latency to the Discord API.", category: "Information", usage: "ping", permissions: "none", isAdmin: false },
-            { name: "serverinfo", aliases: ["si"], description: "Shows detailed information about the server.", category: "Information", usage: "serverinfo", permissions: "none", isAdmin: false },
-            { name: "uptime", aliases: ["ut"], description: "Shows how long the bot has been online.", category: "Information", usage: "uptime", permissions: "none", isAdmin: false },
-            { name: "userinfo", aliases: ["ui"], description: "Displays information about a user.", category: "Information", usage: "userinfo [user]", permissions: "none", isAdmin: false },
-            { name: "messagestats", aliases: ["ms"], description: "View message statistics for a user or channel.", category: "Information", usage: "messagestats [user/channel]", permissions: "none", isAdmin: false },
-            { name: "voicestats", aliases: ["vs"], description: "Shows voice channel activity for a user.", category: "Information", usage: "voicestats [user]", permissions: "none", isAdmin: false },
-            { name: "memberstats", aliases: ["mstats"], description: "Displays member count and stats.", category: "Information", usage: "memberstats", permissions: "none", isAdmin: false },
-            { name: "channelstats", aliases: ["cstats"], description: "Provides statistics for a text channel.", category: "Information", usage: "channelstats [channel]", permissions: "none", isAdmin: false },
-            { name: "analytics", aliases: ["ana"], description: "View server analytics.", category: "Information", usage: "analytics", permissions: "Administrator", isAdmin: true },
-            
             // Moderation Commands
-            { name: "ban", aliases: ["b"], description: "Bans a user from the server.", category: "Moderation", usage: "ban [user] [reason]", permissions: "Ban Members", isAdmin: true },
-            { name: "kick", aliases: ["k"], description: "Kicks a user from the server.", category: "Moderation", usage: "kick [user] [reason]", permissions: "Kick Members", isAdmin: true },
-            { name: "mute", aliases: ["m"], description: "Mutes a user for a specified duration.", category: "Moderation", usage: "mute [user] [duration] [reason]", permissions: "Manage Roles", isAdmin: true },
-            { name: "clear", aliases: ["purge"], description: "Deletes a number of messages from a channel.", category: "Moderation", usage: "clear [amount]", permissions: "Manage Messages", isAdmin: true },
-            { name: "warn", aliases: ["w"], description: "Issues a warning to a user.", category: "Moderation", usage: "warn [user] [reason]", permissions: "Manage Messages", isAdmin: true },
-            { name: "role", aliases: ["r"], description: "Manages roles for users.", category: "Moderation", usage: "role [user] [role]", permissions: "Manage Roles", isAdmin: true },
-            { name: "announce", aliases: ["a"], description: "Sends an announcement to a channel.", category: "Moderation", usage: "announce [channel] [message]", permissions: "Administrator", isAdmin: true },
-            { name: "config", aliases: ["cfg"], description: "Manages server settings.", category: "Moderation", usage: "config", permissions: "Administrator", isAdmin: true },
-            { name: "permissions", aliases: ["perms"], description: "Checks user permissions.", category: "Moderation", usage: "permissions [user]", permissions: "none", isAdmin: false },
-            { name: "incident", aliases: ["inc"], description: "Logs a moderation incident.", category: "Moderation", usage: "incident [user] [type] [details]", permissions: "Manage Channels", isAdmin: true },
+            { name: "modpanel", aliases: [], description: "Access moderator control panel", category: "Moderation", usage: "modpanel", permissions: "Administrator", isAdmin: true },
+            { name: "modreport", aliases: ["reportmod", "modabuse"], description: "Report moderator actions for review", category: "Moderation", usage: "modreport [action] [reason]", permissions: "none", isAdmin: false },
+            { name: "modstats", aliases: [], description: "View moderator statistics", category: "Moderation", usage: "modstats", permissions: "Manage Messages", isAdmin: true },
+            { name: "move", aliases: ["m"], description: "Move users between voice channels", category: "Moderation", usage: "move [user] [channel]", permissions: "Move Members", isAdmin: true },
+            { name: "mute", aliases: ["m"], description: "Mute users in text and voice channels", category: "Moderation", usage: "mute [user] [reason]", permissions: "Mute Members", isAdmin: true },
+            { name: "nickname", aliases: ["nick"], description: "Change user nicknames", category: "Moderation", usage: "nickname [user] [new-nick]", permissions: "Manage Nicknames", isAdmin: true },
+            { name: "note", aliases: ["addnote", "usernote"], description: "Add or view notes about a user", category: "Moderation", usage: "note [user] [text]", permissions: "Manage Nicknames", isAdmin: true },
+            { name: "nuke", aliases: [], description: "Nuke (delete) channels", category: "Moderation", usage: "nuke [channel]", permissions: "Administrator", isAdmin: true },
+            { name: "permcheck", aliases: [], description: "Check user permissions", category: "Moderation", usage: "permcheck [user]", permissions: "Manage Channels", isAdmin: true },
+            { name: "poll", aliases: [], description: "Create polls and voting systems", category: "Moderation", usage: "poll [question] [options]", permissions: "none", isAdmin: false },
+            { name: "prune", aliases: [], description: "Prune inactive server members", category: "Moderation", usage: "prune [days]", permissions: "Kick Members", isAdmin: true },
+            { name: "purge", aliases: ["massdelete", "bulkdelete"], description: "Bulk delete messages with advanced filtering", category: "Moderation", usage: "purge [amount]", permissions: "Manage Messages", isAdmin: true },
+            { name: "raidmode", aliases: [], description: "Enable raid protection mode", category: "Moderation", usage: "raidmode", permissions: "Administrator", isAdmin: true },
+            { name: "ratelimit", aliases: ["slowmode"], description: "Set a chat message rate limit for a channel", category: "Moderation", usage: "ratelimit [channel] [time]", permissions: "Manage Channels", isAdmin: true },
+            { name: "reactionrole", aliases: ["rr"], description: "Set up reaction roles", category: "Moderation", usage: "reactionrole [message] [emoji] [role]", permissions: "Manage Roles", isAdmin: true },
+            { name: "reason", aliases: [], description: "Set or update moderation reasons", category: "Moderation", usage: "reason [case-id] [new-reason]", permissions: "Kick Members", isAdmin: true },
+            { name: "remind", aliases: [], description: "Set reminders for users", category: "Moderation", usage: "remind [user] [time] [message]", permissions: "Manage Messages", isAdmin: true },
+            { name: "role", aliases: [], description: "Manage user roles", category: "Moderation", usage: "role [user] [role]", permissions: "Manage Roles", isAdmin: true },
+            { name: "roleaudit", aliases: [], description: "Audit role assignments", category: "Moderation", usage: "roleaudit", permissions: "View Audit Log", isAdmin: true },
+            { name: "roleinfo", aliases: ["ri"], description: "Display role information", category: "Moderation", usage: "roleinfo [role]", permissions: "none", isAdmin: false },
+            { name: "schedule", aliases: [], description: "Schedule messages and events", category: "Moderation", usage: "schedule [time] [message]", permissions: "Manage Channels", isAdmin: true },
+            { name: "serverlock", aliases: [], description: "Lock the entire server", category: "Moderation", usage: "serverlock", permissions: "Administrator", isAdmin: true },
+            { name: "serverstats", aliases: [], description: "Display server statistics", category: "Moderation", usage: "serverstats", permissions: "none", isAdmin: false },
+            { name: "setlogchannel", aliases: [], description: "Set logging channels", category: "Moderation", usage: "setlogchannel [channel]", permissions: "Administrator", isAdmin: true },
+            { name: "slowmode", aliases: ["sm"], description: "Set a channel slowmode delay", category: "Moderation", usage: "slowmode [channel] [time]", permissions: "Manage Channels", isAdmin: true },
+            { name: "slowmodeall", aliases: [], description: "Set slowmode for all channels", category: "Moderation", usage: "slowmodeall [time]", permissions: "Administrator", isAdmin: true },
+            { name: "softban", aliases: [], description: "Soft ban users (ban and immediate unban)", category: "Moderation", usage: "softban [user] [reason]", permissions: "Ban Members", isAdmin: true },
+            { name: "starboard", aliases: [], description: "Set up starboard for messages", category: "Moderation", usage: "starboard", permissions: "Manage Channels", isAdmin: true },
+            { name: "strike", aliases: ["strikes", "infraction"], description: "Advanced strike system with escalating consequences", category: "Moderation", usage: "strike [user] [reason]", permissions: "Kick Members", isAdmin: true },
+            { name: "strip", aliases: [], description: "Remove all roles from users", category: "Moderation", usage: "strip [user]", permissions: "Manage Roles", isAdmin: true },
+            { name: "tempban", aliases: [], description: "Temporarily ban users", category: "Moderation", usage: "tempban [user] [time] [reason]", permissions: "Ban Members", isAdmin: true },
+            { name: "temprole", aliases: [], description: "Assign temporary roles", category: "Moderation", usage: "temprole [user] [role] [time]", permissions: "Manage Roles", isAdmin: true },
+            { name: "ticket", aliases: [], description: "Create support tickets", category: "Moderation", usage: "ticket", permissions: "none", isAdmin: false },
+            { name: "timeout", aliases: [], description: "Timeout users for specified duration", category: "Moderation", usage: "timeout [user] [time] [reason]", permissions: "Mute Members", isAdmin: true },
+            { name: "unban", aliases: [], description: "Unban users from server", category: "Moderation", usage: "unban [user-id]", permissions: "Ban Members", isAdmin: true },
+            { name: "unbanall", aliases: [], description: "Unban all banned users", category: "Moderation", usage: "unbanall", permissions: "Administrator", isAdmin: true },
+            { name: "undeafen", aliases: [], description: "Undeafen users in voice channels", category: "Moderation", usage: "undeafen [user]", permissions: "Deafen Members", isAdmin: true },
+            { name: "unjail", aliases: [], description: "Remove users from jail role", category: "Moderation", usage: "unjail [user]", permissions: "Manage Roles", isAdmin: true },
+            { name: "unlock", aliases: [], description: "Unlock channels to allow messages", category: "Moderation", usage: "unlock", permissions: "Manage Channels", isAdmin: true },
+            { name: "unlockchannel", aliases: [], description: "Unlock specific channels", category: "Moderation", usage: "unlockchannel [channel]", permissions: "Manage Channels", isAdmin: true },
+            { name: "unmute", aliases: [], description: "Unmute users in channels", category: "Moderation", usage: "unmute [user]", permissions: "Mute Members", isAdmin: true },
+            { name: "verify", aliases: [], description: "Verify server members", category: "Moderation", usage: "verify", permissions: "Manage Roles", isAdmin: true },
+            { name: "voiceban", aliases: [], description: "Ban users from voice channels", category: "Moderation", usage: "voiceban [user]", permissions: "Mute Members", isAdmin: true },
+            { name: "voicekick", aliases: [], description: "Kick users from voice channels", category: "Moderation", usage: "voicekick [user]", permissions: "Move Members", isAdmin: true },
+            { name: "voicelock", aliases: [], description: "Lock voice channels", category: "Moderation", usage: "voicelock [channel]", permissions: "Manage Channels", isAdmin: true },
+            { name: "voicemute", aliases: ["vmute", "vcmute"], description: "Mute a user in voice channels", category: "Moderation", usage: "voicemute [user]", permissions: "Mute Members", isAdmin: true },
+            { name: "voiceunmute", aliases: ["vunmute", "vcunmute"], description: "Unmute a user in voice channels", category: "Moderation", usage: "voiceunmute [user]", permissions: "Mute Members", isAdmin: true },
+            { name: "voicemove", aliases: [], description: "Move users between voice channels", category: "Moderation", usage: "voicemove [user] [channel]", permissions: "Move Members", isAdmin: true },
+            { name: "voicetimeout", aliases: [], description: "Timeout users in voice channels", category: "Moderation", usage: "voicetimeout [user]", permissions: "Mute Members", isAdmin: true },
+            { name: "warn", aliases: [], description: "Issue warnings to users", category: "Moderation", usage: "warn [user] [reason]", permissions: "Manage Messages", isAdmin: true },
+            { name: "warnings", aliases: [], description: "View user warnings", category: "Moderation", usage: "warnings [user]", permissions: "Manage Messages", isAdmin: true },
+            { name: "welcomer", aliases: [], description: "Set up welcome messages", category: "Moderation", usage: "welcomer", permissions: "Administrator", isAdmin: true },
+            { name: "wordfilter", aliases: [], description: "Set up word filtering system", category: "Moderation", usage: "wordfilter", permissions: "Administrator", isAdmin: true },
 
             // Utility Commands
-            { name: "help", aliases: ["h"], description: "Displays a list of all commands.", category: "Utility", usage: "help [command]", permissions: "none", isAdmin: false },
-            { name: "invite", aliases: ["inv"], description: "Sends the bot's invite link.", category: "Utility", usage: "invite", permissions: "none", isAdmin: false },
-            { name: "suggest", aliases: ["sug"], description: "Sends a suggestion to the bot's developers.", category: "Utility", usage: "suggest [suggestion]", permissions: "none", isAdmin: false },
-            { name: "remindme", aliases: ["rm"], description: "Sets a reminder for a specific time.", category: "Utility", usage: "remindme [time] [message]", permissions: "none", isAdmin: false },
-            { name: "avatar", aliases: ["av"], description: "Displays a user's avatar.", category: "Utility", usage: "avatar [user]", permissions: "none", isAdmin: false },
-            { name: "weather", aliases: ["w"], description: "Provides weather information for a location.", category: "Utility", usage: "weather [location]", permissions: "none", isAdmin: false },
-            { name: "calculator", aliases: ["calc"], description: "Performs a mathematical calculation.", category: "Utility", usage: "calculator [expression]", permissions: "none", isAdmin: false },
-            { name: "export", aliases: ["exp"], description: "Exports server data (e.g., messages, users).", category: "Utility", usage: "export [type]", permissions: "Administrator", isAdmin: true },
+            { name: "afk", aliases: [], description: "Set AFK status and auto-reply", category: "Utility", usage: "afk [message]", permissions: "none", isAdmin: false },
+            { name: "avatar", aliases: ["av", "pfp"], description: "Display a user's avatar with download links", category: "Utility", usage: "avatar [user]", permissions: "none", isAdmin: false },
+            { name: "calculator", aliases: ["calc", "math"], description: "Perform mathematical calculations", category: "Utility", usage: "calculator [expression]", permissions: "none", isAdmin: false },
+            { name: "help", aliases: ["h", "commands"], description: "Interactive help system with command categories", category: "Utility", usage: "help [command]", permissions: "none", isAdmin: false },
+            { name: "qr", aliases: [], description: "Generate QR codes", category: "Utility", usage: "qr [text]", permissions: "none", isAdmin: false },
+            { name: "remindme", aliases: [], description: "Set personal reminders", category: "Utility", usage: "remindme [time] [message]", permissions: "none", isAdmin: false },
+            { name: "setvanity", aliases: [], description: "Set server vanity URL", category: "Utility", usage: "setvanity [url]", permissions: "Administrator", isAdmin: true },
+            { name: "suggest", aliases: [], description: "Submit suggestions to server", category: "Utility", usage: "suggest [suggestion]", permissions: "none", isAdmin: false },
+            { name: "time", aliases: [], description: "Display current time and timezone info", category: "Utility", usage: "time", permissions: "none", isAdmin: false },
+            { name: "translate", aliases: [], description: "Translate text between languages", category: "Utility", usage: "translate [language] [text]", permissions: "none", isAdmin: false },
+            { name: "weather", aliases: [], description: "Get weather information", category: "Utility", usage: "weather [location]", permissions: "none", isAdmin: false },
             
             // Fun Commands
-            { name: "8ball", aliases: ["magic8"], description: "Answers a yes/no question.", category: "Fun", usage: "8ball [question]", permissions: "none", isAdmin: false },
-            { name: "joke", aliases: ["j"], description: "Tells a random joke.", category: "Fun", usage: "joke", permissions: "none", isAdmin: false },
-            { name: "meme", aliases: ["m"], description: "Sends a random meme.", category: "Fun", usage: "meme", permissions: "none", isAdmin: false },
-            { name: "coinflip", aliases: ["cf"], description: "Flips a coin.", category: "Fun", usage: "coinflip", permissions: "none", isAdmin: false },
-            { name: "roll", aliases: ["dice"], description: "Rolls a dice with a specified number of sides.", category: "Fun", usage: "roll [sides]", permissions: "none", isAdmin: false },
-
+            { name: "8ball", aliases: [], description: "Magic 8-ball for random answers", category: "Fun", usage: "8ball [question]", permissions: "none", isAdmin: false },
+            { name: "coinflip", aliases: ["cf", "coin"], description: "Flip a virtual coin", category: "Fun", usage: "coinflip", permissions: "none", isAdmin: false },
+            { name: "draw", aliases: [], description: "Draw ASCII art or images", category: "Fun", usage: "draw [prompt]", permissions: "none", isAdmin: false },
+            { name: "joke", aliases: [], description: "Get random jokes", category: "Fun", usage: "joke", permissions: "none", isAdmin: false },
+            { name: "meme", aliases: [], description: "Get random memes", category: "Fun", usage: "meme", permissions: "none", isAdmin: false },
+            { name: "propose", aliases: [], description: "Create marriage proposals", category: "Fun", usage: "propose [user]", permissions: "none", isAdmin: false },
+            { name: "roll", aliases: ["dice", "r"], description: "Roll dice with custom sides", category: "Fun", usage: "roll [sides]", permissions: "none", isAdmin: false },
+            { name: "tree", aliases: [], description: "Generate ASCII Christmas trees", category: "Fun", usage: "tree", permissions: "none", isAdmin: false },
+            
             // Economy Commands
-            { name: "balance", aliases: ["bal"], description: "Checks your current balance.", category: "Economy", usage: "balance", permissions: "none", isAdmin: false },
-            { name: "daily", aliases: ["d"], description: "Claims your daily reward.", category: "Economy", usage: "daily", permissions: "none", isAdmin: false },
-            { name: "shop", aliases: ["s"], description: "Shows the economy shop.", category: "Economy", usage: "shop", permissions: "none", isAdmin: false },
+            { name: "balance", aliases: ["bal", "money"], description: "Check user balance", category: "Economy", usage: "balance", permissions: "none", isAdmin: false },
+            { name: "daily", aliases: [], description: "Claim daily rewards", category: "Economy", usage: "daily", permissions: "none", isAdmin: false },
+            { name: "shop", aliases: [], description: "Browse and purchase items", category: "Economy", usage: "shop", permissions: "none", isAdmin: false },
+            
+            // Music Commands
+            { name: "play", aliases: ["p"], description: "Play music from various sources", category: "Music", usage: "play [song]", permissions: "none", isAdmin: false },
+            { name: "skip", aliases: ["s"], description: "Skip current song", category: "Music", usage: "skip", permissions: "none", isAdmin: false },
+            { name: "stop", aliases: [], description: "Stop music playback", category: "Music", usage: "stop", permissions: "none", isAdmin: false },
         ];
 
         // Get elements
@@ -349,8 +370,8 @@
             const filteredCommands = commands.filter(cmd => {
                 const matchesCategory = activeCategory === "All" || cmd.category === activeCategory;
                 const matchesSearch = cmd.name.toLowerCase().includes(searchTerm) || 
-                                      (cmd.aliases && cmd.aliases.some(alias => alias.toLowerCase().includes(searchTerm))) ||
-                                      cmd.description.toLowerCase().includes(searchTerm);
+                                        (cmd.aliases && cmd.aliases.some(alias => alias.toLowerCase().includes(searchTerm))) ||
+                                        cmd.description.toLowerCase().includes(searchTerm);
                 return matchesCategory && matchesSearch;
             });
             renderCommands(filteredCommands);
@@ -397,3 +418,4 @@
 
 </body>
 </html>
+
